@@ -9,7 +9,6 @@ import PyPDF2
 import docx
 from PIL import Image
 import pytesseract
-import win32com.client  # For handling .doc files (Windows only)
 import io
 import pandas as pd
 
@@ -61,13 +60,6 @@ def extract_text_from_file(file_path, file_type):
         elif file_type == "txt":
             with open(file_path, "r") as f:
                 text = f.read()
-        elif file_type == "doc":
-            # Use win32com to extract text from .doc files (Windows only)
-            word = win32com.client.Dispatch("Word.Application")
-            doc = word.Documents.Open(file_path)
-            text = doc.Content.Text
-            doc.Close()
-            word.Quit()
         elif file_type in ["jpg", "jpeg", "png"]:
             # Use OCR to extract text from images
             image = Image.open(file_path)
