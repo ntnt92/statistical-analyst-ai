@@ -5,6 +5,5 @@ dotenv
 PyPDF2
 python-docx
 pytesseract
-pywin32
 pandas
 Pillow
