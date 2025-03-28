@@ -3,3 +3,4 @@ streamlit
 psutil
 dotenv
 PyPDF2
+python-docx
