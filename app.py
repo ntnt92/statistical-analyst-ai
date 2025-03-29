@@ -1,6 +1,5 @@
 import streamlit as st
 import openai
-import tempfile
 import psutil
 import os
 from dotenv import load_dotenv
@@ -11,6 +10,7 @@ from PIL import Image
 import pytesseract
 import io
 import pandas as pd
+import tempfile
 
 # Load environment variables (API Key)
 load_dotenv()
